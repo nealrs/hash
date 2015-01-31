@@ -66,15 +66,16 @@ def oneHash(a, t):
     u = 'https://ritetag.com/api/v2/ai/twitter/'+urllib.quote_plus(t)
     r = requests.get(u, auth=a)
     tags = []
-    print "(RiteTag API status: ("+ str(r.json()['code']) +")",r.json()['message']
-    if r.json()['code'] == '200':
-        print "\n("+t+"):\n"
+    print "\n["+t+"] (RiteTag API status: ("+ str(r.json()['code']) +")",r.json()['message']
+
+    if str(r.json()['code']) == '200':
         h = r.json()['data']
+
         try:
             if len(h) > 0:
                 for i in range(len(h)):
                     if int(h[i]['color']) > 1:
-                        print h[i]['tag']
+                        #print h[i]['tag']
                         tags.append(h[i]['tag'])
                 return sorted(set(tags))
             else:
@@ -91,9 +92,10 @@ def allHash(l):
     print "\nGETTING HASHTAGS FROM RITETAG API\n"
     for t in l:
         x = oneHash(a, t)
-        if x is not None:
+        if x:
             aTags.append(x)
     print "\nHASHTAGS:\n"
+
     pp = pprint.PrettyPrinter(indent=4)
     pp.pprint(aTags)
 
