@@ -1,6 +1,10 @@
 #API keys & global stuff
 
-# Textability's Topic Extration API
+# Readability api key
+# Get your key at http://readability.com/developers/api
+rk = '---------------------------------'
+
+# Textalytics's Topic Extration API
 # Get your key at https://textalytics.com/personal_area
 Tkey = '---------------------------------'
 lang = 'en' #es/en/fr/it/pt/ca

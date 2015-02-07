@@ -7,11 +7,11 @@ Input a URL & get back a list of relevant hashtags
 **Why**
 
 1. Better hashtags mean better engagement
-2. Experimenting with the RiteTag & Textability APIs for potential inclusion in [25 Headlines](http://nealrs.github.io/25Headlines/).
+2. Experimenting with the RiteTag & Textalytics APIs for potential inclusion in [25 Headlines](http://nealrs.github.io/25Headlines/).
 
 **How**
 
-1. Sign up for [Textability](https://textalytics.com/personal_area) & [RiteTag](http://ritetag.com/developer/signup). 
+1. Sign up for [Textalytics](https://textalytics.com/personal_area) & [RiteTag](http://ritetag.com/developer/signup). 
 2. Add your API keys to `keys_ex.py` & rename it `keys.py`.
 3. Install the dependencies:
   `pip install requests requests_oauthlib click`
