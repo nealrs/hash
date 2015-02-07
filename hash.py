@@ -26,12 +26,12 @@ def run(url, rel, ent, con):
 
 # get keywords from URL & initiate hashtag search
 def analyzeURL(url, rel, ent, con):
-    print "\nGETTING KEYWORDS FROM TEXTABILITY API"
+    print "\nGETTING KEYWORDS FROM TEXTALYTICS API"
     pl = {'key': Tkey, 'lang': lang, 'url': url, 'tt': 'ec', 'src': 'sdk-python-1.2'}
     h = {"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"}
     p = requests.post(api, params=pl, headers=h)
     r = p.json()
-    print "\n(Textability API status:", r['status']['msg']+ ", remaining credits:", r['status']['remaining_credits']+")"
+    print "\n(TEXTALYTICS API status:", r['status']['msg']+ ", remaining credits:", r['status']['remaining_credits']+")"
 
     #### ENTITIES ####
     h = []
